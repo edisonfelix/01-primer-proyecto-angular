@@ -2,13 +2,8 @@
 <hr>
 <div class="row">
     <div class="col">
-        <h3>Personajes</h3>
-        <hr>
-        <ul>
-            <li *ngFor="let personaje of personajes">
-                {{personaje.nombre}} - {{personaje.poder}}
-            </li>
-        </ul>
+        <!-- [personajes] es la variable del @Input y personajes es la variable que esta en main-page  -->
+        <app-personajes [personajes]="personajes"></app-personajes>
     </div>
     <div class="col">
         <h3>Agregar - {{nuevo.nombre}}</h3>
