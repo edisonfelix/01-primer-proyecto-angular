@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Personaje } from '../interfaces/dbz.interface';
 
 
@@ -8,6 +8,7 @@ import { Personaje } from '../interfaces/dbz.interface';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent implements OnInit {
+
 
   personajes: Personaje[] = [{
     nombre:'Goku',
@@ -27,33 +28,39 @@ export class MainPageComponent implements OnInit {
   }
   ]
 
-  nuevo:Personaje={
-    nombre:'Krillin',
-    poder: 5000
+  nuevo:Personaje = {
+    nombre: 'Roshi',
+    poder: 1000
   }
+
+
+  // nuevo:Personaje={
+  //   nombre:'Krillin',
+  //   poder: 5000
+  // }
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  agregar(){
+  // agregar(){
    
-    if(this.nuevo.nombre.trim().length === 0){
-      return;
-    }
+  //   if(this.nuevo.nombre.trim().length === 0){
+  //     return;
+  //   }
 
-    this.personajes.push(this.nuevo)
-    this.nuevo = {
-      nombre:'',
-      poder:0
-    };
+  //   this.personajes.push(this.nuevo)
+  //   this.nuevo = {
+  //     nombre:'',
+  //     poder:0
+  //   };
    
-  }
+  // }
 
-  cambiarNombre(event: any){
-    console.log(event);
+  // cambiarNombre(event: any){
+  //   console.log(event);
     
-  }
+  // }
 
 }
