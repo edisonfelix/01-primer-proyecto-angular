@@ -10,7 +10,7 @@ import { Personaje } from '../interfaces/dbz.interface';
 export class MainPageComponent implements OnInit {
 
 
-  personajes: Personaje[] = [{
+  listaPersonajes: Personaje[] = [{
     nombre:'Goku',
     poder:10000
   },
@@ -28,9 +28,13 @@ export class MainPageComponent implements OnInit {
   }
   ]
 
-  nuevo:Personaje = {
+  nuevoPersonaje:Personaje = {
     nombre: 'Roshi',
     poder: 1000
+  }
+
+  agregarNuevoPersonaje(argumento: Personaje){
+    this.listaPersonajes.push(argumento)
   }
 
 
@@ -62,5 +66,10 @@ export class MainPageComponent implements OnInit {
   //   console.log(event);
     
   // }
+
+
+  
+
+
 
 }
